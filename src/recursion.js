@@ -166,11 +166,17 @@ var modulo = function(x, y) {
 	if(y === 0){
 		return undefined;
 	}
-	if(x === 0){
+	if(x === 0 || y === 1){
 		return 0;
 	}
-	if(y === 1){
+	if(x === y){
 		return 0;
+	}
+	if(x < 0 && y < 0){
+		return 0 - modulo(-x, -y);
+	}
+	if(x < 0){
+		return 0 - modulo(-x, y);
 	}
 	if(x - y > 0){
 		return modulo(x - y, y);
