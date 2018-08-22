@@ -580,7 +580,7 @@
 
       it('should ignore spaces and capital letters', function() {
         expect(palindrome('Rotor')).to.be.true;
-        expect(palindrome('sAip puaki v iKaup Pias')).to.be.true;
+        expect(palindrome('sAip puaki viKaupP ias')).to.be.true;
       });
 
       it('should use recursion by calling self', function() {
